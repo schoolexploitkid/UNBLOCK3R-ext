@@ -1,7 +1,7 @@
 var ltbeef = false;
 var reload = false;
 var securlykill = false;
-var DNS = false;
+var DNSemulator = false;
 async function getCurrentTab() {
   let queryOptions = { active: true, lastFocusedWindow: true };
   // `tab` will either be a `tabs.Tab` instance or `undefined`.
@@ -19,7 +19,7 @@ if (reload) {
   reload = false;
 }
 // code for DNS emulator
-if (DNS) {
+if (DNSemulator) {
   chrome.webRequest.onBeforeRequest.addListener(
     function(details) {
       // Block requests to any filtering-related domain, emulating DNS configuration
