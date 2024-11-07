@@ -2,6 +2,7 @@ var ltbeef = false;
 var reload = false;
 var securlykill = false;
 var DNSemulator = false;
+// define function for getting tabs
 async function getCurrentTab() {
   let queryOptions = { active: true, lastFocusedWindow: true };
   // `tab` will either be a `tabs.Tab` instance or `undefined`.
