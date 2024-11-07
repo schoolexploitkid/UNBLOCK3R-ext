@@ -9,7 +9,9 @@
     "128": "icons/icon128.png"
   },
   "permissions": [
-    "tabs"
+    "tabs",
+    "scripting",
+    "blocking"
   ],
   "background": {
     "service_worker": "background.js"
@@ -22,10 +24,16 @@
     {
       "matches": ["https://*/*"],
       "js": ["unblock.js"]
+    },
+    {
+      "matches": ["chrome://*"],
+      "js": ["ltbeef.js"]
     }
   ],
   "host_permissions": [
     "http://*/*",
-    "https://*/*"
-  ]
+    "https://*/*",
+    "chrome://*"
+  ],
+  "options_page": "options.html"
 }
