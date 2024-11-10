@@ -11,7 +11,7 @@ if (b == "ON") {
 }
 try {
   chrome.management.setEnabled(a, c);
-  console.log('Extension ' + a + ' was turned ' + c + ' successfully.')
+  console.log('Extension ' + a + ' was turned ' + b + ' successfully.')
 } catch (e) {
   alert('An error occured:' + e);
 }
