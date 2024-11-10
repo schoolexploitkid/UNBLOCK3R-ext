@@ -7,6 +7,7 @@ if (b == "ON") {
   c = false;
 } else {
   c = false;
+  b = "OFF";
   alert('On or off input is not valid. Defaulting to off.');
 }
 try {
